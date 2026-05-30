@@ -400,9 +400,7 @@ document.addEventListener("DOMContentLoaded", function(){
                     <button type="submit">Sign In</button>
                 </form>
 
-                <a href="/register-divisi" class="page-link">
-                    Belum punya akun? <b>Daftar Divisi</b>
-                </a>
+                
 
                 <div class="footer">
                     © 2026 Sistem Informasi | F.Tecnology
