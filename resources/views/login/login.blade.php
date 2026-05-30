@@ -18,7 +18,7 @@ body{
     min-height:100vh;
    background:
         linear-gradient(rgba(8,12,25,.76), rgba(8,12,25,.76)),
-        url('/properti.png') no-repeat center center;
+        url('/') no-repeat center center;
     background-size:cover;
     display:flex;
     justify-content:center;
