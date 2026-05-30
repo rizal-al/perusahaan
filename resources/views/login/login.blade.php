@@ -471,7 +471,9 @@ document.addEventListener("DOMContentLoaded", function(){
     <button type="submit">Sign In</button>
 </form>
 
-            
+                <a href="/register-direksi" class="page-link">
+                    Belum punya akun? <b>Daftar Direksi</b>
+                </a>
 
                 <div class="footer">
                     © 2026 Sistem Informasi | F.Tecnology
