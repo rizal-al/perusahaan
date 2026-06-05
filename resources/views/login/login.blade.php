@@ -13,17 +13,14 @@
     font-family:'Segoe UI',sans-serif;
 }
 
-/* BODY ANIMASI */
+/* BODY */
 body{
     min-height:100vh;
-   background:
-        linear-gradient(rgba(8,12,25,.76), rgba(8,12,25,.76)),
-        url('/properti.png') no-repeat center center;
-    background-size:cover;
+    background:#f4f6f9;
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:10px;
+    padding:20px;
 
     opacity:0;
     transform:translateX(60px);
@@ -54,12 +51,11 @@ body.exit-right{
 .content{
     display:flex;
     justify-content:center;
-    align-items:stretch; /* penting */
+    align-items:stretch;
     gap:40px;
     flex-wrap:wrap;
 }
 
-/* kolom dibuat stretch penuh */
 .col{
     flex:1;
     min-width:420px;
@@ -68,22 +64,28 @@ body.exit-right{
     align-items:center;
 }
 
-/* 🔥 INI KUNCI PENYAMAAN TINGGI */
+/* CARD */
 .box{
     width:100%;
     max-width:500px;
-    flex:1;              /* TAMBAH INI */
-    display:flex;        /* TAMBAH INI */
-    flex-direction:column; /* TAMBAH INI */
+    flex:1;
+    display:flex;
+    flex-direction:column;
+
     padding:40px 35px;
-    color:#fff;
-    border-radius:30px;
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,.18);
-    backdrop-filter:blur(18px);
-    box-shadow:0 18px 45px rgba(0,0,0,.28);
+
+    background:#ffffff;
+    color:#1f2937;
+
+    border-radius:14px;
+    border:1px solid #dbe3ea;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,.05),
+        0 10px 30px rgba(0,0,0,.08);
 }
-/* 🔥 TOPBAR DI LUAR CARD */
+
+/* TOPBAR */
 .topbar-card{
     display:flex;
     justify-content:center;
@@ -97,16 +99,15 @@ body.exit-right{
     height:55px;
     background:url('logo.png') no-repeat center center;
     background-size:cover;
-    border-radius:14px;
+    border-radius:12px;
 }
 
 .topbar-card .brand{
-    color:#fff;
+    color:#1f2937;
     font-size:20px;
     font-weight:700;
-    letter-spacing:2px;
+    letter-spacing:1px;
 }
-
 
 /* HEADER */
 .header{
@@ -119,39 +120,41 @@ body.exit-right{
     height:75px;
     background:url('logo.png') no-repeat center center;
     background-size:cover;
-    border-radius:20px;
+    border-radius:18px;
     margin:0 auto 15px;
 }
 
 h3{
-    font-size:32px;
+    font-size:30px;
     font-weight:700;
     margin-bottom:6px;
+    color:#111827;
 }
 
 .subtitle{
     font-size:14px;
-    opacity:.85;
+    color:#64748b;
 }
 
 /* ALERT */
 .alert{
     padding:12px;
     margin-bottom:15px;
-    border-radius:12px;
+    border-radius:10px;
     font-size:14px;
+    transition:all .5s ease;
 }
 
 .error{
-    background:rgba(255,80,80,.20);
-    border:1px solid rgba(255,255,255,.18);
-    color:#fff;
+    background:#fee2e2;
+    border:1px solid #fecaca;
+    color:#991b1b;
 }
 
 .success{
-    background:rgba(0,255,140,.18);
-    border:1px solid rgba(255,255,255,.18);
-    color:#fff;
+    background:#dcfce7;
+    border:1px solid #bbf7d0;
+    color:#166534;
 }
 
 /* INPUT */
@@ -159,48 +162,58 @@ input{
     width:100%;
     padding:14px 16px;
     margin-bottom:12px;
-    border-radius:12px;
-    border:2px solid rgba(126,255,255,.40);
-    background:rgba(255,255,255,.08);
-    color:#fff;
+
+    border-radius:8px;
+    border:1px solid #cbd5e1;
+
+    background:#fff;
+    color:#111827;
+
     outline:none;
+    transition:.2s;
 }
 
 input:focus{
-    border-color:#7ffcff;
-    box-shadow:0 0 15px rgba(127,252,255,.35);
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
 }
 
 /* BUTTON */
 button{
     width:100%;
     padding:14px;
+
     border:none;
-    border-radius:12px;
-    background:linear-gradient(90deg,#4facfe,#00f2fe);
+    border-radius:8px;
+
+    background:#2563eb;
     color:#fff;
-    font-size:16px;
-    font-weight:700;
+
+    font-size:15px;
+    font-weight:600;
+
     cursor:pointer;
     transition:.2s;
 }
 
 button:hover{
-    transform:translateY(-2px);
+    background:#1d4ed8;
 }
 
 /* LINK */
 a{
     display:block;
     margin-top:15px;
+
     text-align:center;
-    color:#fff;
     text-decoration:none;
+
     font-size:14px;
+    color:#475569;
 }
 
 a b{
-    color:#9ffcff;
+    color:#2563eb;
 }
 
 /* FOOTER */
@@ -208,94 +221,28 @@ a b{
     text-align:center;
     margin-top:15px;
     font-size:12px;
-    opacity:.75;
+    color:#64748b;
 }
 
+/* RESPONSIVE */
 @media(max-width:900px){
     .col{
         min-width:100%;
     }
 }
 
-.alert{
-    transition: all 0.5s ease;
-}
-#rain{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    pointer-events:none;
-    z-index:999; /* ubah ke 999 kalau mau di depan */
-}
-/* ================= NEON RUNNING BORDER (PUTIH) ================= */
-
-.card,
-.box,
-.chart-box,
-.summary-box{
-    position: relative;
-    z-index: 1;
-}
-
-/* 🔥 layer neon */
-.card::after,
-.box::after,
-.chart-box::after,
-.summary-box::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 12px;
-    padding: 2px;
-
-    /* 🔥 warna putih neon */
-    background: linear-gradient(
-        120deg,
-        transparent 0%,
-        rgba(255,255,255,0.2) 20%,
-        #ffffff 40%,
-        rgba(255,255,255,0.2) 60%,
-        transparent 100%
-    );
-
-    background-size: 300% 300%;
-
-    /* 🔥 lebih lambat & smooth */
-    animation: borderRun 8s linear infinite;
-
-    /* 🔥 efek glow */
-    filter: blur(2px) brightness(1.6);
-
-    /* 🔥 hanya pinggir */
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-
-    pointer-events: none;
-}
-
-/* 🔥 animasi jalan */
-@keyframes borderRun{
-    0%{
-        background-position: 0% 50%;
-    }
-    100%{
-        background-position: 300% 50%;
-    }
-}
-/* LOADING LOGIN */
+/* LOADING */
 .loading-overlay{
     position:fixed;
     inset:0;
-    background:rgba(8,12,25,.72);
-    backdrop-filter:blur(6px);
+
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(4px);
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     z-index:99999;
 
     opacity:0;
@@ -309,17 +256,14 @@ a b{
 }
 
 .loader{
-    width:90px;
-    height:90px;
-    border-radius:50%;
+    width:70px;
+    height:70px;
 
-    border:5px solid rgba(255,255,255,.15);
-    border-top:5px solid #7ffcff;
+    border-radius:50%;
+    border:4px solid #dbeafe;
+    border-top:4px solid #2563eb;
 
     animation:spin 1s linear infinite;
-
-    box-shadow:
-        0 0 20px rgba(127,252,255,.45);
 }
 
 @keyframes spin{
@@ -328,6 +272,7 @@ a b{
     }
 }
 </style>
+
 </head>
 
 <!-- PAGE ANIMASI (TETAP) -->
